@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
         --light-grayish-blue: #D0D6F9;
         --bellefair: 'Bellefair', sans-serif;
         --barlow : 'Barlow', sans-serif;
-        --BarlowCondensed: 'Barlow Condensed', sans-serif;
+        --barlowCondensed: 'Barlow Condensed', sans-serif;
     }
 `;
 export default GlobalStyle

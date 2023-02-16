@@ -1,12 +1,13 @@
 import React from "react";
 import HeaderDiv from "../Header/header";
+import { HomeDiv } from "./style";
 
 function Home() {
     return(
-        <div className="HomeDiv">
+        <HomeDiv>
             <HeaderDiv />
-        </div>
+        </HomeDiv>
     );
 }
 
-export default Home
+export default Home;

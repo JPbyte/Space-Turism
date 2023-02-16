@@ -2,13 +2,13 @@ import React from "react";
 import Header from "../Header/header";
 
 
-function Crew() {
+function Destination() {
     
     return(
-        <div className="crewDiv">
+        <div className="destinationDiv">
             <Header />
         </div>
     );
 }
 
-export default Crew;
+export default Destination;

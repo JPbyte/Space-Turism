@@ -2,13 +2,13 @@ import React from "react";
 import Header from "../Header/header";
 
 
-function Crew() {
+function Tech() {
     
     return(
-        <div className="crewDiv">
+        <div className="technology">
             <Header />
         </div>
     );
 }
 
-export default Crew;
+export default Tech;
