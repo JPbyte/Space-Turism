@@ -9,6 +9,9 @@ const GlobalStyle = createGlobalStyle`
         list-style: none;
         text-decoration: none;
     }
+    body{
+        overflow-x: hidden;
+    }
     //Style button Global
     button{
         cursor: pointer;
