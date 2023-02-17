@@ -31,7 +31,7 @@ export const HeaderDiv = styled.header`
                 display: none;
             }
     }
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 650px){
         padding: 3rem;
             #logo{
                 margin-left: 0;
@@ -84,14 +84,20 @@ export const Nav = styled.nav`
             margin-left: 0;
         }
     @media screen and (max-width: 1050px){
-        max-width: 40.35rem;
+        max-width: 37.35rem;
+            .div-nav{
+                justify-content: center;
+            }
+            a{
+                font-size: 0.875rem;
+            }
     }
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 650px){
         position: absolute;
-        height: 100%;
+        height: ${({show}) => (show ? "100%" : "0%")};
         width: 60%;
         top: 0;
-        right: ${({show}) => (show ? "0rem" : "-20rem")};
+        right: 0;
         flex-direction: column;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
@@ -102,7 +108,7 @@ export const Nav = styled.nav`
                 right: 2rem;
             }
             .div-nav{
-                width: 70%;
+                width: 85%;
                 height: 40%;
                 flex-direction: column;
                 margin-bottom: 15rem;

@@ -28,6 +28,7 @@ function Header() {
                 color="white"
                 size="2.5rem" 
                 cursor="pointer"
+                onClick={showSideBar}
                 />
                     <div className="div-nav">
                         <Link to="/">
