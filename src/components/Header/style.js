@@ -17,7 +17,7 @@ export const HeaderDiv = styled.header`
             border: 1px var(--white) solid;
             opacity: 0.25;
             width: 100%;
-            max-width: 32.263rem;
+            max-width: 29.263rem;
             position: absolute;
             left: 11.25rem;
             z-index: 1;
@@ -31,7 +31,7 @@ export const HeaderDiv = styled.header`
                 display: none;
             }
     }
-    @media screen and (max-width: 650px){
+    @media screen and (max-width: 700px){
         padding: 3rem;
             #logo{
                 margin-left: 0;
@@ -52,7 +52,7 @@ export const Nav = styled.nav`
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(40.7742px);
         .div-nav{
-            width: 31.56rem;
+            width: 39.56rem;
             height: 100%;
             display: flex;
             justify-content: space-between;
@@ -92,7 +92,7 @@ export const Nav = styled.nav`
                 font-size: 0.875rem;
             }
     }
-    @media screen and (max-width: 650px){
+    @media screen and (max-width: 700px){
         position: absolute;
         height: ${({show}) => (show ? "100%" : "0%")};
         width: 60%;
@@ -101,6 +101,7 @@ export const Nav = styled.nav`
         flex-direction: column;
         overflow: hidden;
         transition: all 0.3s ease-in-out;
+        z-index: 1;
             svg{
                 display: block;
                 position: absolute;

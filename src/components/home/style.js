@@ -7,4 +7,119 @@ export const HomeDiv = styled.main`
     background: url(${HbgDesktop});
     background-position: center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`;
+
+export const HomeContent = styled.div`
+    width: 80%;
+    height: 31rem;
+    margin: 0 auto;
+    display: flex;
+
+    @media screen and (max-width: 1050px){
+        height: 41rem;
+        flex-direction: column;
+        align-items: center;
+    }
+`;
+
+//Title, Subtitle and text
+export const ContentLeft = styled.section`
+    width: 50%;
+        h1{
+            font-family: var(--bellefair);
+            color: var(--white);
+            font-size: 9.375rem;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        h2{
+            font-family: var(--barlowCondensed);
+            color: var(--light-grayish-blue);
+            font-size: 1.75rem;
+            font-weight: 400;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        p{
+            width: 100%;
+            max-width: 28rem;
+            font-family: var(--barlow);
+            color: var(--light-grayish-blue);
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 2rem;
+        }
+    @media screen and (max-width: 1050px){
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+            h1{
+                font-size: 9.375rem;
+            }
+            h2{
+                font-size: 1.25rem;
+            }
+            p{
+                font-size: 1rem;
+                max-width: 27rem;
+                text-align: center;
+            }
+    }
+`;
+
+//Button "Explore"
+export const ContentRight = styled.section`
+    width: 50%;
+    height: 24rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+        a{
+            width: 17.125rem;
+            height: 17.125rem;
+            border: none;
+            border-radius: 50%;
+            position: relative;
+            font-family: var(--bellefair);
+            font-weight: 400;
+            color: var(--very-dark-blue);
+            font-size: 2rem;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--white);
+                &:hover::before{
+                    transform: scale(1.7);
+                }
+        }
+        a::before{
+            content: '';
+            position: absolute;
+            width: 17.125rem;
+            height: 17.125rem;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            top: 0;
+            left: 0;
+            transition: all 0.4s;
+        }
+
+    @media screen and (max-width: 1050px){
+        width: 100%;
+        justify-content: center;
+            a{
+                width: 15.125rem;
+                height: 15.125rem;
+            }
+            a::before{
+                width: 15.125rem;
+                height: 15.125rem;
+            }
+    }
 `;

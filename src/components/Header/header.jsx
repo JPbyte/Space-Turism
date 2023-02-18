@@ -13,16 +13,16 @@ function Header() {
     function showSideBar() {
         setSideBar(!sidebar);
     }
-
+    
     return(
         <HeaderDiv>
             <img id="logo" src={Logo} alt="logo" />
             <span className="bar"></span>
-            <VscMenu onClick={showSideBar}
-            color="white"
-            size="2.5rem"
-            cursor="pointer"
-            />
+                <VscMenu onClick={showSideBar}
+                color="white"
+                size="2.5rem"
+                cursor="pointer"
+                />
             <Nav show={sidebar}>
                 <VscChromeClose 
                 color="white"
