@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../Header/header";
+import { DestinationDiv } from "./style";
 
 
 function Destination() {
     
     return(
-        <div className="destinationDiv">
+        <DestinationDiv>
             <Header />
-        </div>
+        </DestinationDiv>
     );
 }
 

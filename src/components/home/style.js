@@ -1,5 +1,9 @@
 import styled from "styled-components";
+
+//Images background
 import HbgDesktop from "./background-home-desktop.jpg";
+import HbgTablet from "./background-home-tablet.jpg";
+import HbgMobile from "./background-home-mobile.jpg";
 
 export const HomeDiv = styled.main`
     width: 100%;
@@ -10,6 +14,17 @@ export const HomeDiv = styled.main`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    @media screen and (max-width: 900px) {
+        background: url(${HbgTablet}) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    @media screen and (max-width: 500px) {
+        background: url(${HbgMobile});
+        background-position: center;
+        background-size: cover;
+    }
 `;
 
 export const HomeContent = styled.div`
@@ -18,10 +33,13 @@ export const HomeContent = styled.div`
     margin: 0 auto;
     display: flex;
 
-    @media screen and (max-width: 1050px){
-        height: 41rem;
+    @media screen and (max-width: 900px){
+        height: 43rem;
         flex-direction: column;
         align-items: center;
+    }
+    @media screen and (max-width: 500px) {
+        height: 43rem;
     }
 `;
 
@@ -52,7 +70,7 @@ export const ContentLeft = styled.section`
             font-weight: 400;
             line-height: 2rem;
         }
-    @media screen and (max-width: 1050px){
+    @media screen and (max-width: 900px){
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -68,6 +86,19 @@ export const ContentLeft = styled.section`
                 font-size: 1rem;
                 max-width: 27rem;
                 text-align: center;
+            }
+    }
+    @media screen and (max-width: 500px){
+            h1{
+                font-size: 5.5rem;
+                margin-bottom: 1rem;
+            }
+            h2{
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            p{
+                font-size: 0.934rem;
             }
     }
 `;
@@ -110,16 +141,33 @@ export const ContentRight = styled.section`
             transition: all 0.4s;
         }
 
-    @media screen and (max-width: 1050px){
+    @media screen and (max-width: 900px){
         width: 100%;
         justify-content: center;
             a{
                 width: 15.125rem;
                 height: 15.125rem;
+                    &:hover::before{
+                        transform: scale(1.5);
+                    }
             }
             a::before{
                 width: 15.125rem;
                 height: 15.125rem;
             }
+    }
+    @media screen and (max-width: 500px){
+        a{
+            width: 10.375rem;
+            height: 10.375rem;
+            font-size: 1.25rem;
+                &:hover::before{
+                    transform: scale(1.5);
+                }
+        }
+        a::before{
+            width: 10.375rem;
+            height: 10.375rem;
+        }
     }
 `;
