@@ -32,19 +32,19 @@ function Header() {
                 />
                     <div className="div-nav">
                         <Link to="/">
-                            <strong className="number">01</strong>
+                            <strong className="number">00</strong>
                                 Home
                         </Link>
                         <Link to="/destination">
-                            <strong className="number">02</strong>
+                            <strong className="number">01</strong>
                                 Destination
                         </Link>
                         <Link to="/crew">
-                            <strong className="number">03</strong>
+                            <strong className="number">02</strong>
                                 Crew
                         </Link>
                         <Link to="/tech">
-                            <strong className="number">04</strong>
+                            <strong className="number">03</strong>
                                 Technology
                         </Link>
                     </div>

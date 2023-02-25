@@ -22,8 +22,17 @@ const GlobalStyle = createGlobalStyle`
         --very-dark-blue: #0b0d17;
         --light-grayish-blue: #D0D6F9;
         --bellefair: 'Bellefair', sans-serif;
-        --barlow : 'Barlow', sans-serif;
+        --barlow: 'Barlow', sans-serif;
         --barlowCondensed: 'Barlow Condensed', sans-serif;
+    }
+
+    @keyframes rotate {
+        to{
+            transform: rotate(0);
+        }
+        from{
+            transform: rotate(360deg);
+        }
     }
 `;
 export default GlobalStyle
