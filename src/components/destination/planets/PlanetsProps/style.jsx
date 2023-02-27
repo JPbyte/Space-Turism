@@ -1,54 +1,7 @@
 import styled from "styled-components";
 
 
-export const ImageContent = styled.section`
-    width: 50%;
-        img{
-            width: 27.812rem;
-            height: 27.812rem;
-            animation: rotate 120s;
-        }
-`;
-
-export const List = styled.ul`
-    width: 100%;
-    max-width: 22rem;
-    display: flex;
-    justify-content: space-between;
-        li{
-            font-family: var(--barlowCondensed);
-            font-weight: 400;
-            font-size: 1.5rem;
-            color: var(--light-grayish-blue);
-            text-transform: uppercase;
-            letter-spacing: 4px;
-            cursor: pointer;
-            position: relative;
-        }
-        li:hover{
-            color: var(--white);
-        }
-        li::after{
-            content: "";
-            width: 0%;
-            height: 2px;
-            background-color: var(--white);
-            position: absolute;
-            left: 0;
-            bottom: -0.3rem;
-            transition: all 0.2s ease-in-out;
-        }
-        li:hover::after{
-            width: 100%;
-        }
-`;
-
-export const PlanetArticle = styled.article`
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 5rem;
+export const TitleDescription = styled.div`
         h1{
             font-family: var(--bellefair);
             font-weight: 400;
