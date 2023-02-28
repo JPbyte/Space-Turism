@@ -17,11 +17,21 @@ import TitanImg from "./image-titan.png";
 
 function Destination() {
 
-    const [active, setActive] = useState(false)
+    const [active, setActive] = useState({
+        showMoon: true,
+        showMars: false,
+        showEuropa: false,
+        showTitan: false,
+    });
 
-    function ShowPlanet(){
-        setActive(!active)
-    }
+    const handlePlanetClick = (planet) => {
+        setActive({
+            showMoon: planet === "Moon",
+            showMars: planet === "Mars",
+            showEuropa: planet === "Europa",
+            showTitan: planet === "Titan",
+        });
+    };
 
     return(
         <DestinationDiv>
@@ -31,16 +41,16 @@ function Destination() {
                 Pick your destination
             </p>
             <PlanetMain>
-                <MoonDiv show={active}>
+                <MoonDiv show={active.showMoon}>
                     <ImageContent>
                         <img src={MoonImg} alt="Moon"/>
                     </ImageContent>
                     <PlanetArticle>
                         <List>
-                            <li onClick={ShowPlanet}>Moon</li>
-                            <li onClick={ShowPlanet}>Mars</li>
-                            <li>Europa</li>
-                            <li>Titan</li>
+                            <li>Moon</li>
+                            <li onClick={() => handlePlanetClick("Mars")}>Mars</li>
+                            <li onClick={() => handlePlanetClick("Europa")}>Europa</li>
+                            <li onClick={() => handlePlanetClick("Titan")}>Titan</li>
                         </List>
                         <PlanetsProps
                             title="Moon"
@@ -54,16 +64,16 @@ function Destination() {
                         />
                     </PlanetArticle>
                 </MoonDiv>
-                <MarsDiv show={active}>
+                <MarsDiv show={active.showMars}>
                     <ImageContent>
                         <img src={MarsImg} alt="Mars"/>
                     </ImageContent>
                     <PlanetArticle>
                         <List>
-                            <li onClick={ShowPlanet}>Moon</li>
+                            <li onClick={() => handlePlanetClick("Moon")}>Moon</li>
                             <li>Mars</li>
-                            <li>Europa</li>
-                            <li>Titan</li>
+                            <li onClick={() => handlePlanetClick("Europa")}>Europa</li>
+                            <li onClick={() => handlePlanetClick("Titan")}>Titan</li>
                         </List>
                         <PlanetsProps
                             title="Mars"
@@ -76,16 +86,16 @@ function Destination() {
                         />
                     </PlanetArticle>
                 </MarsDiv>
-                <EuropaDiv>
+                <EuropaDiv show={active.showEuropa}>
                     <ImageContent>
                         <img src={EuropaImg} alt="Europa"/>
                     </ImageContent>
                     <PlanetArticle>
                         <List>
-                            <li>Moon</li>
-                            <li>Mars</li>
+                            <li onClick={() => handlePlanetClick("Moon")}>Moon</li>
+                            <li onClick={() => handlePlanetClick("Mars")}>Mars</li>
                             <li>Europa</li>
-                            <li>Titan</li>
+                            <li onClick={() => handlePlanetClick("Titan")}>Titan</li>
                         </List>
                         <PlanetsProps
                             title="Europa"
@@ -99,15 +109,15 @@ function Destination() {
                         />
                     </PlanetArticle>
                 </EuropaDiv>
-                <TitanDiv>
+                <TitanDiv show={active.showTitan}>
                     <ImageContent>
                         <img src={TitanImg} alt="Titan"/>
                     </ImageContent>
                     <PlanetArticle>
                         <List>
-                            <li>Moon</li>
-                            <li>Mars</li>
-                            <li>Europa</li>
+                            <li onClick={() => handlePlanetClick("Moon")}>Moon</li>
+                            <li onClick={() => handlePlanetClick("Mars")}>Mars</li>
+                            <li onClick={() => handlePlanetClick("Europa")}>Europa</li>
                             <li>Titan</li>
                         </List>
                         <PlanetsProps

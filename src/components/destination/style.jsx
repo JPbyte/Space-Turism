@@ -38,7 +38,7 @@ export const PlanetMain = styled.div`
 
 export const MoonDiv = styled.div`
     position: absolute;
-    left: ${({show}) => (show ? "-120rem" : "0")};
+    left: ${({show}) => (show ? "0rem" : "-120rem")};
     width: 100%;
     height: 100%;
     display: flex;
