@@ -1,13 +1,14 @@
 import React from "react";
 import Header from "../Header/header";
+import { CrewMain } from "./style";
 
 
 function Crew() {
     
     return(
-        <div className="crewDiv">
+        <CrewMain>
             <Header />
-        </div>
+        </CrewMain>
     );
 }
 

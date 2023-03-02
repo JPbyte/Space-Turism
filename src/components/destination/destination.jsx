@@ -23,7 +23,6 @@ function Destination() {
         showEuropa: false,
         showTitan: false,
     });
-
     const handlePlanetClick = (planet) => {
         setActive({
             showMoon: planet === "Moon",
@@ -32,7 +31,6 @@ function Destination() {
             showTitan: planet === "Titan",
         });
     };
-
     return(
         <DestinationDiv>
             <Header/>
