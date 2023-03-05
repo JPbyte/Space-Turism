@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../Header/header";
 import {AnousheDiv, CrewDiv, CrewLeft, CrewMain, CrewRight, DouglasDiv, MarkDiv, VicDiv} from "./style";
 
@@ -13,6 +13,22 @@ import Anousheh from "./image-anousheh-ansari.png";
 
 function Crew() {
     
+    const [showLeft, setShowLeft] = useState({
+        showDouglas: true,
+        showMark: false,
+        showVictor: false,
+        showAnousheh: false,
+    });
+
+    const handleClick = (crew) => {
+        setShowLeft({
+            showDouglas: crew === "Douglas",
+            showMark: crew === "Mark",
+            showVictor: crew === "Victor",
+            showAnousheh: crew === "Anousheh",
+        })
+    }
+
     return(
         <CrewMain>
             <Header />
@@ -22,7 +38,7 @@ function Crew() {
             </p>
             {/*Mom div for crew content*/}
             <CrewDiv>
-                <DouglasDiv>
+                <DouglasDiv open={showLeft.showDouglas}>
                     <CrewLeft>
                         <CrewProps
                             subtitle="Commander"
@@ -32,16 +48,16 @@ function Crew() {
                         />
                         <ul>
                             <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li onClick={() => handleClick("Mark")}></li>
+                            <li onClick={() => handleClick("Victor")}></li>
+                            <li onClick={() => handleClick("Anousheh")}></li>
                         </ul>
                     </CrewLeft>
                     <CrewRight>
                         <img src={Douglas} alt="Crew-img" />
                     </CrewRight>
                 </DouglasDiv>
-                <MarkDiv>
+                <MarkDiv open={showLeft.showMark}>
                     <CrewLeft>
                         <CrewProps
                             subtitle="Mission Specialist "
@@ -50,17 +66,17 @@ function Crew() {
                             Shuttleworth became the first South African to travel to space as a space tourist."
                         />
                         <ul>
+                            <li onClick={() => handleClick("Douglas")}></li>
                             <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li onClick={() => handleClick("Victor")}></li>
+                            <li onClick={() => handleClick("Anousheh")}></li>
                         </ul>
                     </CrewLeft>
                     <CrewRight>
                         <img src={Mark} alt="Crew-img" />
                     </CrewRight>
                 </MarkDiv>
-                <VicDiv>
+                <VicDiv open={showLeft.showVictor}>
                     <CrewLeft>
                         <CrewProps
                             subtitle="PILOT"
@@ -70,17 +86,17 @@ function Crew() {
                             and served as a station systems flight engineer."
                         />
                         <ul>
+                            <li onClick={() => handleClick("Douglas")}></li>
+                            <li onClick={() => handleClick("Mark")}></li>
                             <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li onClick={() => handleClick("Anousheh")}></li>
                         </ul>
                     </CrewLeft>
                     <CrewRight>
                         <img src={Victor} alt="Crew-img" />
                     </CrewRight>
                 </VicDiv>
-                <AnousheDiv>
+                <AnousheDiv open={showLeft.showAnousheh}>
                     <CrewLeft>
                         <CrewProps
                             subtitle="Flight Engineer"
@@ -90,9 +106,9 @@ function Crew() {
                             ISS, and the first Iranian in space. "
                         />
                         <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li onClick={() => handleClick("Douglas")}></li>
+                            <li onClick={() => handleClick("Mark")}></li>
+                            <li onClick={() => handleClick("Victor")}></li>
                             <li></li>
                         </ul>
                     </CrewLeft>

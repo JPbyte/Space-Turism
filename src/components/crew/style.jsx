@@ -78,6 +78,7 @@ export const DouglasDiv = styled.section`
     height: 100%;
     position: absolute;
     display: flex;
+    top: ${({open}) => (open ? "0rem" : "-120rem")};
     transition: all .5s ease-in-out;
         li:nth-child(1){
             background-color: var(--white);
@@ -88,7 +89,7 @@ export const MarkDiv = styled.section`
     width: 100%;
     height: 100%;
     position: absolute;
-    left: -80rem;
+    top: ${({open}) => (open ? "0rem" : "-120rem")};
     display: flex;
     transition: all .5s ease-in-out;
         li:nth-child(2){
@@ -101,7 +102,7 @@ export const VicDiv = styled.section`
     width: 100%;
     height: 100%;
     position: absolute;
-    left: -80rem;
+    top: ${({open}) => (open ? "0rem" : "-120rem")};
     display: flex;
     transition: all .5s ease-in-out;
         li:nth-child(3){
@@ -114,7 +115,7 @@ export const AnousheDiv = styled.section`
     width: 100%;
     height: 100%;
     position: absolute;
-    left: -80rem;
+    top: ${({open}) => (open ? "0rem" : "-120rem")};
     display: flex;
     transition: all .5s ease-in-out;
         li:nth-child(4){
