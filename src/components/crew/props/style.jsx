@@ -47,4 +47,17 @@ export const CrewArticle = styled.article`
                 text-align: center;
             }
     }
+    @media screen and (max-width: 700px){
+        height: 23rem;
+            h1{
+                font-size: 1.5rem;
+            }
+            h2{
+                font-size: 1rem;
+            }
+            p{
+                font-size: 0.93rem;
+                text-align: center;
+            }
+    }
 `;

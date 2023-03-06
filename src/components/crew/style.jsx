@@ -3,7 +3,7 @@ import styled from "styled-components";
 //background and images
 import BgCrew from "./background-crew-desktop.jpg";
 import BgCrewTablet from "./background-crew-tablet.jpg";
-
+import BgCrewMobile from "./background-crew-mobile.jpg";
 
 export const CrewMain = styled.main`
     width: 100%;
@@ -36,10 +36,20 @@ export const CrewMain = styled.main`
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        #meet{
-            font-size: 1.2rem;
-            height: 4rem;
-        }
+            #meet{
+                font-size: 1.2rem;
+                height: 4rem;
+            }
+    }
+    @media screen and (max-width: 700px) {
+        background: url(${BgCrewMobile});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+            #meet{
+                width: 100%;
+                justify-content: center;
+            }
     }
 `;
 
@@ -86,6 +96,11 @@ export const CrewLeft = styled.div`
         align-items: center;
         margin-bottom: 2rem;
     }
+    @media screen and (max-width: 700px) {
+        margin-bottom: 0;
+        height: 100%;
+        flex-direction: column-reverse;
+    }
 `;
 
 export const CrewRight = styled.picture`
@@ -93,6 +108,10 @@ export const CrewRight = styled.picture`
     height: 100%;
     display: flex;
     justify-content: flex-end;
+        img{
+            width: 38.43rem;
+            height: 42.2rem;
+        }
 
     @media screen and (max-width: 1050px){
         width: 100%;
@@ -101,6 +120,12 @@ export const CrewRight = styled.picture`
                 width: 18.52rem;
                 height: 29.2rem;
             }
+    }
+    @media screen and (max-width: 700px) {
+        img{
+            width: 13.06rem;
+            height: 15.87rem;
+        }
     }
 `;
 
@@ -115,9 +140,14 @@ export const DouglasDiv = styled.section`
             background-color: var(--white);
             opacity: 1;
         }
+
     @media screen and (max-width: 1050px) {
         flex-direction: column;
         align-items: center;
+    }
+    @media screen and (max-width: 700px) {
+        height: 100%;
+        flex-direction: column-reverse;
     }
 `;
 export const MarkDiv = styled.section`
@@ -134,6 +164,10 @@ export const MarkDiv = styled.section`
     @media screen and (max-width: 1050px) {
         flex-direction: column;
         align-items: center;
+    }
+    @media screen and (max-width: 700px) {
+        height: 100%;
+        flex-direction: column-reverse;
     }
 `;
 
@@ -152,6 +186,10 @@ export const VicDiv = styled.section`
         flex-direction: column;
         align-items: center;
     }
+    @media screen and (max-width: 700px) {
+        height: 100%;
+        flex-direction: column-reverse;
+    }
 `;
 
 export const AnousheDiv = styled.section`
@@ -168,6 +206,10 @@ export const AnousheDiv = styled.section`
     @media screen and (max-width: 1050px) {
         flex-direction: column;
         align-items: center;
+    }
+    @media screen and (max-width: 700px) {
+        height: 100%;
+        flex-direction: column-reverse;
     }
 `;
 
