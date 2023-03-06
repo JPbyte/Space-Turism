@@ -33,4 +33,18 @@ export const CrewArticle = styled.article`
             line-height: 2rem;
             color: var(--light-grayish-blue);
         }
+    
+    @media screen and (max-width: 1050px){
+        align-items: center;
+            h1{
+                font-size: 2.5rem;
+            }
+            h2{
+                font-size: 1.5rem;
+            }
+            p{
+                font-size: 1rem;
+                text-align: center;
+            }
+    }
 `;

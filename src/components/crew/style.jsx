@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 //background and images
 import BgCrew from "./background-crew-desktop.jpg";
+import BgCrewTablet from "./background-crew-tablet.jpg";
 
 
 export const CrewMain = styled.main`
@@ -29,6 +30,17 @@ export const CrewMain = styled.main`
                     margin-right: 0.5rem;
                 }
         }
+
+    @media screen and (max-width: 1050px) {
+        background: url(${BgCrewTablet});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        #meet{
+            font-size: 1.2rem;
+            height: 4rem;
+        }
+    }
 `;
 
 export const CrewDiv = styled.div`
@@ -36,6 +48,10 @@ export const CrewDiv = styled.div`
     height: 42.2rem;
     margin: 0 auto;
     position: relative;
+
+    @media screen and (max-width: 1050px) {
+        width: 100%;
+    }
 `;
 
 export const CrewLeft = styled.div`
@@ -64,6 +80,12 @@ export const CrewLeft = styled.div`
                         }
                 }
         }
+    @media screen and (max-width: 1050px){
+        width: 100%;
+        height: 35%;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
 `;
 
 export const CrewRight = styled.picture`
@@ -71,6 +93,15 @@ export const CrewRight = styled.picture`
     height: 100%;
     display: flex;
     justify-content: flex-end;
+
+    @media screen and (max-width: 1050px){
+        width: 100%;
+        justify-content: center;
+            img{
+                width: 18.52rem;
+                height: 29.2rem;
+            }
+    }
 `;
 
 export const DouglasDiv = styled.section`
@@ -84,6 +115,10 @@ export const DouglasDiv = styled.section`
             background-color: var(--white);
             opacity: 1;
         }
+    @media screen and (max-width: 1050px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 export const MarkDiv = styled.section`
     width: 100%;
@@ -96,6 +131,10 @@ export const MarkDiv = styled.section`
             background-color: var(--white);
             opacity: 1;
         }
+    @media screen and (max-width: 1050px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const VicDiv = styled.section`
@@ -109,6 +148,10 @@ export const VicDiv = styled.section`
             background-color: var(--white);
             opacity: 1;
         }
+    @media screen and (max-width: 1050px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 export const AnousheDiv = styled.section`
@@ -122,6 +165,10 @@ export const AnousheDiv = styled.section`
             background-color: var(--white);
             opacity: 1;
         }
+    @media screen and (max-width: 1050px) {
+        flex-direction: column;
+        align-items: center;
+    }
 `;
 
 
