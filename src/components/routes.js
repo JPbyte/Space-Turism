@@ -6,7 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./home/home";
 import Destination from "./destination/destination";
 import Crew from "./crew/crew";
-import Tech from "./technology/technology";
+import Technology from "./technology/technology";
 
 const Paths = () => {
     return(
@@ -15,7 +15,7 @@ const Paths = () => {
             <Route path="/" element={<Home/>} />
             <Route path="/destination" element={<Destination/>} />
             <Route path="/crew" element={<Crew/>} />
-            <Route path="/tech" element={<Tech/>} />
+            <Route path="/technology" element={<Technology/>} />
         </Routes>
 
     )

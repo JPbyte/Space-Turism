@@ -1,14 +1,18 @@
 import React from "react";
 import Header from "../Header/header";
+import { Tech } from "./style";
 
-
-function Tech() {
+function Technology() {
     
     return(
-        <div className="technology">
+        <Tech>
             <Header />
-        </div>
+            <p id="tech-number">
+                <span>03</span>
+                SPACE LAUNCH 101
+            </p>
+        </Tech>
     );
 }
 
-export default Tech;
+export default Technology;

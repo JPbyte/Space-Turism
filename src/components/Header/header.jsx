@@ -43,7 +43,7 @@ function Header() {
                             <strong className="number">02</strong>
                                 Crew
                         </Link>
-                        <Link to="/tech">
+                        <Link to="/technology">
                             <strong className="number">03</strong>
                                 Technology
                         </Link>
