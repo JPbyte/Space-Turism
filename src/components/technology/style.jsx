@@ -28,3 +28,86 @@ export const Tech = styled.main`
                 }
         }
 `;
+
+export const TechDiv = styled.div`
+    width: 100%;
+    height: 31rem;
+    position: relative;
+`;
+
+export const Launch = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    display: ${({Show}) => (Show ? "flex" : "none")};
+        li:first-child{
+            color: var(--very-dark-blue);
+            background-color: var(--white);
+        }
+`;
+export const SpacePort = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transition: .5s;
+    display: ${({Show}) => (Show ? "flex" : "none")};
+        li:nth-child(2){
+            color: var(--very-dark-blue);
+            background-color: var(--white);
+        } 
+`;
+export const Capsule = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    transition: .5s;
+    display: ${({Show}) => (Show ? "flex" : "none")};
+        li:nth-child(3){
+            color: var(--very-dark-blue);
+            background-color: var(--white);
+        } 
+`;
+
+export const LaunchLeft = styled.section`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+        ul{
+            height: 20rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+                li{
+                    width: 5rem;
+                    height: 5rem;
+                    background-color: transparent;
+                    border-radius: 50%;
+                    border: 0.5px var(--white) solid;
+                    color: var(--white);
+                    font-family: var(--bellefair);
+                    font-weight: 400;
+                    font-size: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    transition: .5s;
+                        &:hover{
+                            color: var(--very-dark-blue);
+                            background-color: var(--white);
+                            transform: scale(1.05);
+                        }
+                }
+        }
+`;
+
+export const LaunchRight = styled.div`
+    width: 55%;
+        img{
+            width: 100%;
+            height: 30rem;
+        }
+`;
