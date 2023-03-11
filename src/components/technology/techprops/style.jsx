@@ -30,4 +30,31 @@ export const PropsContent = styled.div`
             color: var(--light-grayish-blue);
             line-height: 2rem;
         }
+    @media screen and (max-width: 1050px){
+        width: 100%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+        margin-left: none;
+        height: 12rem;
+        justify-content: space-between;
+            h1{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 1rem;
+                text-align: center;
+            }
+    }
+    @media screen and (max-width: 1050px){
+            h1{
+                font-size: 1.5rem;
+            }
+            h2{
+                font-size: 0.875rem;
+            }
+            p{
+                font-size: 0.93rem;
+            }
+    }
 `;

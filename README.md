@@ -26,6 +26,13 @@ Users should be able to:
 
 ### Screenshot
 
+Mobile Design:
+
+![Alt text](src/components/home/background-home-mobile.jpg)
+
+Desktop Design:
+
+![Alt text](src/components/home/background-home-desktop.jpg)
 
 ### Links
 
@@ -35,9 +42,13 @@ Users should be able to:
 ### My process
 
 ### Built with
-
+- React
+- React library(react-router)
+- Styled-components
 
 ### What i learned
+
+I learned Props, useState and react-router
 
 ### Author
 

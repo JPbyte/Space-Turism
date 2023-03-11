@@ -27,6 +27,17 @@ export const Tech = styled.main`
                     margin-right: 0.5rem;
                 }
         }
+    @media screen and (max-width: 1050px){
+        #tech-number{
+            height: 5rem;
+        }
+    }
+    @media screen and (max-width: 1050px){
+        #tech-number{
+            width: 100%;
+            justify-content: center;
+        }
+    }
 `;
 
 export const TechDiv = styled.div`
@@ -45,6 +56,10 @@ export const Launch = styled.div`
             color: var(--very-dark-blue);
             background-color: var(--white);
         }
+
+    @media screen and (max-width: 1050px) {
+        flex-direction: column-reverse;
+    }
 `;
 export const SpacePort = styled.div`
     width: 100%;
@@ -57,6 +72,9 @@ export const SpacePort = styled.div`
             color: var(--very-dark-blue);
             background-color: var(--white);
         } 
+    @media screen and (max-width: 1050px) {
+        flex-direction: column-reverse;
+    }
 `;
 export const Capsule = styled.div`
     width: 100%;
@@ -69,6 +87,9 @@ export const Capsule = styled.div`
             color: var(--very-dark-blue);
             background-color: var(--white);
         } 
+    @media screen and (max-width: 1050px) {
+        flex-direction: column-reverse;
+    }
 `;
 
 export const LaunchLeft = styled.section`
@@ -102,6 +123,30 @@ export const LaunchLeft = styled.section`
                         }
                 }
         }
+    @media screen and (max-width: 1050px){
+        flex-direction: column;
+            ul{
+                width: 28%;
+                height: 4rem;
+                margin: 0 auto;
+                flex-direction: row;
+                margin-bottom: 1.5rem;
+                li{
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    font-size: 1.5rem;
+                }
+            }
+    }
+    @media screen and (max-width: 700px){
+        ul{
+            li{
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1rem;
+            }
+        }
+    }
 `;
 
 export const LaunchRight = styled.div`
@@ -110,4 +155,12 @@ export const LaunchRight = styled.div`
             width: 100%;
             height: 30rem;
         }
+
+    @media screen and (max-width: 1050px) {
+        width: 98%;
+        margin-bottom: 1.5rem;
+            img{
+                height: 21.37rem;
+            }
+    }
 `;
