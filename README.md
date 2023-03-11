@@ -36,8 +36,8 @@ Desktop Design:
 
 ### Links
 
-- Solution URL: [Space tourism website solution]()
-- Live Site URL: [Add live site URL here]()
+- Solution URL: [Space tourism website solution](https://www.frontendmentor.io/solutions/responsive-space-turism-website-reactreactjsstyledcomponents-_AoPWkBTbR)
+- Live Site URL: [Add live site URL here](https://space-turism-345bev5m8-jpbyte.vercel.app)
 
 ### My process
 
